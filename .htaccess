@@ -1,0 +1,75 @@
+	# ENABLE INDEXING
+	Options +Indexes
+
+	# INDEX OPTIONS
+	IndexOptions +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
+
+	# HIDE /theme DIRECTORY
+	IndexIgnore .htaccess /theme favicon.ico *.tmproj 404.html htaccess
+	ErrorDocument 404 /404.html
+
+#
+# GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
+#
+
+#
+# Replace {FOLDERNAME} with your directory URL eg:
+# If your directory is http://mywebsite.com/share/
+# you would change to:
+#
+# AddIcon /share/theme/icons/blank.png ^^BLANKICON^^
+#
+
+	AddIcon /theme/icons/blank.png ^^BLANKICON^^
+	AddIcon /theme/icons/folder.png ^^DIRECTORY^^
+	AddIcon /theme/icons/folder-home.png ..
+
+#
+# EXTENSION SPECIFIC ICONS
+#
+	
+	AddIcon /theme/icons/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra .wav .wma
+	AddIcon /theme/icons/bin.png .bin
+	AddIcon /theme/icons/c.png .c
+	AddIcon /theme/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv 
+	AddIcon /theme/icons/css.png .css
+	AddIcon /theme/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps .liquid
+	AddIcon /theme/icons/draw.png .svg
+	AddIcon /theme/icons/eps.png .ai .eps
+	AddIcon /theme/icons/gif.png .gif
+	AddIcon /theme/icons/html.png .html .xhtml .shtml .htm
+	AddIcon /theme/icons/ico.png .ico
+	AddIcon /theme/icons/java.png .jar
+	AddIcon /theme/icons/jpg.png .jpg .jpeg
+	AddIcon /theme/icons/js.png .js .json
+	AddIcon /theme/icons/markdown.png .md
+	AddIcon /theme/icons/package.png .pkg .dmg 
+	AddIcon /theme/icons/pdf.png .pdf
+	AddIcon /theme/icons/php.png .php
+	AddIcon /theme/icons/png.png .png
+	AddIcon /theme/icons/ps.png .ps
+	AddIcon /theme/icons/psd.png .psd
+	AddIcon /theme/icons/rar.png .rar
+	AddIcon /theme/icons/rb.png .rb
+	AddIcon /theme/icons/rss.png .rss
+	AddIcon /theme/icons/sql.png .sql
+	AddIcon /theme/icons/tiff.png .tiff
+	AddIcon /theme/icons/text.png .txt
+	AddIcon /theme/icons/video.png .asf .asx .avi .flv .mov .mp4 .mpg .rm .srt .swf .vob .wmv
+	AddIcon /theme/icons/xml.png .xml
+	AddIcon /theme/icons/zip.png .zip
+	DefaultIcon /theme/icons/default.png
+
+#
+# THEME FILES
+#
+
+	HeaderName /theme/header.html
+	ReadmeName /theme/footer.html
+	IndexStyleSheet "/theme/style.css"
+	
+	
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.html -f
+	RewriteRule ^(.*)$ $1.html
