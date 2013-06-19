@@ -28,6 +28,18 @@ Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result l
 
 1. Download.
 2. Add the contents of directory-theme to the ```root``` folder of your localhost (ex. Sites)
+3. Check to be sure you have a ```.htaccess``` file in the root and that its contents are the same as [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess)
+	- you may need to show hidden files by typing the following into terminal:
+		
+		```
+		defaults write com.apple.Finder AppleShowAllFiles TRUE
+		```
+		
+		then restart finder by typing
+		
+		```
+		killall Finder
+		```
 3. Go!
 
 ## Configurations
