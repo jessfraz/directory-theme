@@ -40,7 +40,7 @@ Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result l
 		```
 		killall Finder
 		```
-3. View your localhost in your favorite browser *cough* **Chrome** *cough*
+3. View your localhost in your favorite browser, *cough* **Chrome** *cough*
 
 ## Configurations
 
