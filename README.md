@@ -8,19 +8,19 @@ Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result l
 - custom styling of the default directory indexing
 - ```.html``` files are linked to without the file extension (ex. http://localhost/example.html -> http://localhost/example)
 
-	if you would rather like this to be removing the file extention for ```.php``` files replace these lines 
+	- if you would rather like this to be removing the file extention for ```.php``` files replace these lines 
 
-	```
-	RewriteCond %{REQUEST_FILENAME}\.html -f
-	RewriteRule ^(.*)$ $1.html
-	```
+		```
+		RewriteCond %{REQUEST_FILENAME}\.html -f
+		RewriteRule ^(.*)$ $1.html
+		```
 
-	in [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess) with the following
+		in [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess) with the following
 
-	```
-	RewriteCond %{REQUEST_FILENAME}\.php -f
-	RewriteRule ^(.*)$ $1.php
-	```
+		```
+		RewriteCond %{REQUEST_FILENAME}\.php -f
+		RewriteRule ^(.*)$ $1.php
+		```
 - changes "Last modified" column to display time as time since (ex. 2 minutes ago, 4 days ago, etc)
 - ```htaccess-txt.txt``` is included because ```.htaccess``` might be hidden by your computer after downloading, copy the contents into a file you name ```.htaccess``` if this is the case
 
