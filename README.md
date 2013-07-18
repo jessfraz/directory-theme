@@ -35,7 +35,7 @@ Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result l
 		defaults write com.apple.Finder AppleShowAllFiles TRUE
 		```
 		
-		then restart finder by typing
+	- then restart finder by typing
 		
 		```
 		killall Finder
