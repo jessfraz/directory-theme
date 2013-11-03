@@ -91,7 +91,8 @@ input {
 	-moz-transition: border linear .2s, box-shadow linear .2s;
 	-o-transition: border linear .2s, box-shadow linear .2s;
 	transition: border linear .2s, box-shadow linear .2s;
-	background: url('search.png') no-repeat 211px center;
+	background: url('search.svg') no-repeat 211px center;
+    background-size:auto 20px;
 }
 
 input:focus {
@@ -196,6 +197,10 @@ td {
 	     -o-transition:background 300ms ease-in;
 	        transition:background 300ms ease-in;
 }
+td:last-child, th:last-child {
+	text-align:right;
+	padding-right:0px;
+}
 td a{
 	display: block;
 }
@@ -216,4 +221,5 @@ tr.parent a {
 img {
 	outline:none;
 	border:none;
+    max-height:16px;
 }
