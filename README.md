@@ -53,4 +53,7 @@ Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result l
 
 ### Credits
 
-Based off [apaxy](https://github.com/AdamWhitcroft/Apaxy) by Adam Whitcroft 
+Based off [apaxy](https://github.com/AdamWhitcroft/Apaxy) by Adam Whitcroft
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/directory-theme/README.md)](https://github.com/jfrazelle/directory-theme)
