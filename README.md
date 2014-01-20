@@ -1,6 +1,6 @@
 # Directory Theme
 A simple, customizable theme for your Apache directory listing.
-Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result looks like: [gif library](http://hugtheef.com).
+Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result looks like: [gif library](http://gifs.jessfraz.com).
 
 ## Features
 
