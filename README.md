@@ -19,10 +19,15 @@ $ cd into_vhost_root_directory_you_want_to_be_prettified/
 $ git clone git@github.com:jfrazelle/directory-theme.git
 
 # move the directory contents to the parent directory
-$ sudo mv directory-theme/* /
+$ cd directory-theme/
+$ mv * .[^.]* ..
+# you may get an output of: mv: cannot stat ‘*’: No such file or directory
+# that's fine, if you `ls -a` the directory it should be empty
+$ cd ../
 
-# remove nginx items
+# remove nginx items & .git just so it doesn't mess with your other stuff
 $ rm -rf directory-theme.conf
+$ rm -rf .git*
 ```
 
 Then, view your virtual host in your favorite browser, *cough* **Chrome** *cough*.
@@ -35,10 +40,15 @@ $ cd into_vhost_root_directory_you_want_to_be_prettified/
 $ git clone git@github.com:jfrazelle/directory-theme.git
 
 # move the directory contents to the parent directory
-$ sudo mv directory-theme/* /
+$ cd directory-theme/
+$ mv * .[^.]* ..
+# you may get an output of: mv: cannot stat ‘*’: No such file or directory
+# that's fine, if you `ls -a` the directory it should be empty
+$ cd ../
 
-# remove apache items
+# remove apache items & .git just so it doesn't mess with your other stuff
 $ rm -rf .htaccess
+$ rm -rf .git*
 
 # rename directory-theme.conf to your site config name ex. lab.jessfraz.com
 # at the same time moving it to the sites-available folder
@@ -51,6 +61,9 @@ $ sudo vim /etc/nginx/sites-available/lab.jessfraz.com
 # activate the host by creating a symbolic link between
 # the sites-available directory and the sites-enabled directory
 $ sudo ln -s /etc/nginx/sites-available/lab.jessfraz.com /etc/nginx/sites-enabled/lab.jessfraz.com
+
+# restart nginx
+$ sudo service nginx restart
 ```
 
 Then, view your virtual host in your favorite browser, *cough* **Chrome** *cough*.
