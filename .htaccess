@@ -6,7 +6,7 @@
 
 	# HIDE /theme DIRECTORY
 	IndexIgnore .htaccess /theme favicon.ico *.swp *.swo 404.html
-	ErrorDocument 404 /404.html
+	ErrorDocument 404 /theme/404.html
 
 #
 # GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
@@ -20,41 +20,41 @@
 # AddIcon /share/theme/icons/blank.png ^^BLANKICON^^
 #
 
-	AddIcon /theme/icons/default.png ^^BLANKICON^^
-	AddIcon /theme/icons/folder.png ^^DIRECTORY^^
-	AddIcon /theme/icons/folder-home.png ..
+	AddIcon /.icons/default.png ^^BLANKICON^^
+	AddIcon /.icons/folder.png ^^DIRECTORY^^
+	AddIcon /.icons/folder-home.png ..
 
 #
 # EXTENSION SPECIFIC ICONS
 #
-	
-	AddIcon /theme/icons/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra
-	AddIcon /theme/icons/wav.png .wav .wma
-	AddIcon /theme/icons/c.png .c
-	AddIcon /theme/icons/css.png .css
-	AddIcon /theme/icons/word.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
-	AddIcon /theme/icons/svg.png .svg
-	AddIcon /theme/icons/illustrator.png .ai .eps
-	AddIcon /theme/icons/gif.png .gif
-	AddIcon /theme/icons/html.png .html .xhtml .shtml .htm .liquid .md .rb
-	AddIcon /theme/icons/ico.png .ico
-	AddIcon /theme/icons/java.png .jar
-	AddIcon /theme/icons/jpg.png .jpg .jpeg
-	AddIcon /theme/icons/js.png .js .json 
-	AddIcon /theme/icons/torrent.png .pkg .dmg .rar
-	AddIcon /theme/icons/acrobat.png .pdf
-	AddIcon /theme/icons/php.png .php
-	AddIcon /theme/icons/png.png .png .tiff
-	AddIcon /theme/icons/photoshop.png .ps .psd
-	AddIcon /theme/icons/rss.png .rss
-	AddIcon /theme/icons/sql.png .sql
-	AddIcon /theme/icons/otf.png	.otf
-	AddIcon /theme/icons/ttf.png .ttf .woff .eot
-	AddIcon /theme/icons/txt.png .txt
-	AddIcon /theme/icons/video.png .asf .asx .avi .flv .mov .mp4 .mpg .rm .srt .swf .vob .wmv
-	AddIcon /theme/icons/excel.png .xml .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv 
-	AddIcon /theme/icons/zip.png .zip .bin
-	DefaultIcon /theme/icons/default.png
+
+	AddIcon /.icons/audio-x-mpeg.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra
+	AddIcon /.icons/audio-x-wav.png .wav .wma
+	AddIcon /.icons/text-x-c.png .c
+	AddIcon /.icons/text-css.png .css
+	AddIcon /.icons/application-msword.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+	AddIcon /.icons/image-svg.png .svg
+	AddIcon /.icons/illustrator.png .ai .eps
+	AddIcon /.icons/image-gif.png .gif
+	AddIcon /.icons/text-html.png .html .xhtml .shtml .htm .liquid .md .rb
+	AddIcon /.icons/image-x-ico.png .ico
+	AddIcon /.icons/application-x-jar.png .jar
+	AddIcon /.icons/image-jpg.png .jpg .jpeg
+	AddIcon /.icons/text-x-javascript.png .js .json
+	AddIcon /.icons/application-x-bittorrent.png .pkg .dmg .rar
+	AddIcon /.icons/application-pdf.png .pdf
+	AddIcon /.icons/application-x-php.png .php
+	AddIcon /.icons/image-png.png .png .tiff
+	AddIcon /.icons/image-x-psd.png .ps .psd
+	AddIcon /.icons/application-rss+xml.png .rss
+	AddIcon /.icons/text-x-sql.png .sql
+	AddIcon /.icons/otf.png	.otf
+	AddIcon /.icons/ttf.png .ttf .woff .eot
+	AddIcon /.icons/text-plain.png .txt
+	AddIcon /.icons/video-x-generic.png .asf .asx .avi .flv .mov .mp4 .mpg .rm .srt .swf .vob .wmv
+	AddIcon /.icons/application-vnd.ms-excel.png .xml .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+	AddIcon /.icons/application-x-zip.png .zip .bin
+	DefaultIcon /.icons/default.png
 
 #
 # THEME FILES
@@ -63,8 +63,8 @@
 	HeaderName /theme/header.html
 	ReadmeName /theme/footer.html
 	IndexStyleSheet "/theme/style.css"
-	
-	
+
+
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME}\.html -f

@@ -1,58 +1,61 @@
 # Directory Theme
-A simple, customizable theme for your Apache directory listing.
-Be sure you have ```mod_autoindex``` loaded. Here is a demo of what the result looks like: [gif library](http://gifs.jessfraz.com).
+A simple, customizable theme for your **Apache** or **nginx** directory listing.
+Here is a demo of what the result looks like: [gif library](http://gifs.jessfraz.com).
 
-## Features
+**Features**
 
 - search the directory and display results, as the user inputs the search term
 - custom styling of the default directory indexing
 - ```.html``` files are linked to without the file extension (ex. http://localhost/example.html -> http://localhost/example)
-
-	- if you would rather like this to be removing the file extention for ```.php``` files replace these lines 
-
-		```
-		RewriteCond %{REQUEST_FILENAME}\.html -f
-		RewriteRule ^(.*)$ $1.html
-		```
-
-		in [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess) with the following
-
-		```
-		RewriteCond %{REQUEST_FILENAME}\.php -f
-		RewriteRule ^(.*)$ $1.php
-		```
 - changes "Last modified" column to display time as time since (ex. 2 minutes ago, 4 days ago, etc)
-- ```htaccess-txt.txt``` is included because ```.htaccess``` might be hidden by your computer after downloading, copy the contents into a file you name ```.htaccess``` if this is the case
 
-## Installation
+**Apache Features**
 
-1. Download.
-2. Add the contents of directory-theme to the ```root``` folder of your localhost (ex. Sites)
-3. Check to be sure you have a ```.htaccess``` file in the root and that its contents are the same as [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess)
-	- you may need to show hidden files by typing the following into terminal:
-		
-		```
-		defaults write com.apple.Finder AppleShowAllFiles TRUE
-		```
-		
-		-then restart finder by typing
-		
-		```
-		killall Finder
-		```
-3. View your localhost in your favorite browser, *cough* **Chrome** *cough*
+## Apache Setup
+Be sure you have ```mod_autoindex``` loaded on your server.
 
-## Configurations
+```bash
+$ cd into_vhost_root_directory_you_want_to_be_prettified/
+$ git clone git@github.com:jfrazelle/directory-theme.git
 
-- Change any styles in [style.css](https://github.com/jfrazelle/directory-theme/blob/master/theme/style.css)
-- Add any elements or customize the header:  [header.html](https://github.com/jfrazelle/directory-theme/blob/master/theme/header.html)
-- Add any elements or customize the footer:  [footer.html](https://github.com/jfrazelle/directory-theme/blob/master/theme/footer.html)
-- Ignore certain files or directorys by customizing [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess) by adding to the line ```IndexIgnore .htaccess /theme favicon.ico *.tmproj 404.html htaccess```
-- Swap out, add, or custumize any icon by changing [.htaccess](https://github.com/jfrazelle/directory-theme/blob/master/.htaccess) and editing the lines starting with ```AddIcon``` and changing the file reference, ```/theme/icons/gif.png``` or file extension, ```.gif```, result should look like this ```AddIcon /theme/icons/gif.png .gif```
+# move the directory contents to the parent directory
+$ sudo mv directory-theme/* /
 
+# remove nginx items
+$ rm -rf directory-theme.conf
+```
+
+Then, view your virtual host in your favorite browser, *cough* **Chrome** *cough*.
+
+## nginx Setup
+Be sure you have [```ngx_http_addition_module```](http://nginx.org/en/docs/http/ngx_http_addition_module.html) loaded on your server.
+
+```bash
+$ cd into_vhost_root_directory_you_want_to_be_prettified/
+$ git clone git@github.com:jfrazelle/directory-theme.git
+
+# move the directory contents to the parent directory
+$ sudo mv directory-theme/* /
+
+# remove apache items
+$ rm -rf .htaccess
+
+# rename directory-theme.conf to your site config name ex. lab.jessfraz.com
+# at the same time moving it to the sites-available folder
+$ sudo mv directory-theme.conf /etc/nginx/sites-available/lab.jessfraz.com
+
+# edit the relevant fields for your setup
+# these are server_name and root
+$ sudo vim /etc/nginx/sites-available/lab.jessfraz.com
+
+# activate the host by creating a symbolic link between
+# the sites-available directory and the sites-enabled directory
+$ sudo ln -s /etc/nginx/sites-available/lab.jessfraz.com /etc/nginx/sites-enabled/lab.jessfraz.com
+```
+
+Then, view your virtual host in your favorite browser, *cough* **Chrome** *cough*.
 
 ### Credits
-
 Based off [apaxy](https://github.com/AdamWhitcroft/Apaxy) by Adam Whitcroft
 
 
