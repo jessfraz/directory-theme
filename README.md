@@ -16,7 +16,7 @@ Be sure you have ```mod_autoindex``` loaded on your server.
 
 ```bash
 $ cd into_vhost_root_directory_you_want_to_be_prettified/
-$ git clone git@github.com:jfrazelle/directory-theme.git
+$ git clone git@github.com:jessfraz/directory-theme.git
 
 # move the directory contents to the parent directory
 $ cd directory-theme/
@@ -37,7 +37,7 @@ Be sure you have [```ngx_http_addition_module```](http://nginx.org/en/docs/http/
 
 ```bash
 $ cd into_vhost_root_directory_you_want_to_be_prettified/
-$ git clone git@github.com:jfrazelle/directory-theme.git
+$ git clone git@github.com:jessfraz/directory-theme.git
 
 # move the directory contents to the parent directory
 $ cd directory-theme/
@@ -72,4 +72,4 @@ Then, view your virtual host in your favorite browser, *cough* **Chrome** *cough
 Based off [apaxy](https://github.com/AdamWhitcroft/Apaxy) by Adam Whitcroft
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/directory-theme/README.md)](https://github.com/jfrazelle/directory-theme)
+[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/directory-theme/README.md)](https://github.com/jessfraz/directory-theme)
